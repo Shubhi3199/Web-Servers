@@ -33,14 +33,14 @@ app.get('', (req, res) =>{
                   error: errorForecast
                })
             }else {
-               // res.render('index', {
-               //    title: location,
-               //    description: `the temperature currently is ${temperature} and wind speed is calculated to be ${windSpeed}`
-               // })
-               res.send({    // for creating a JSON HTTP endpoint
-                  location: location,
-                  forecast: `the temperature currently is ${temperature} and wind speed is calculated to be ${windSpeed}`
+               res.render('index', {
+                  title: location,
+                  description: `the temperature currently is ${temperature} and wind speed is calculated to be ${windSpeed}`
                })
+               // res.send({    // for creating a JSON HTTP endpoint
+               //    location: location,
+               //    forecast: `the temperature currently is ${temperature} and wind speed is calculated to be ${windSpeed}`
+               // })
             }
          })
       }
