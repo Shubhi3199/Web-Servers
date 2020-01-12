@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <title>bootstrap 4 sidebar</title>
+</head>
+<body>
+
+<!---------------------Nav Bar------------------------>
+
+{{>navbar}}
+
+<div class="wrapper pt-5 fixed">
+    <nav id="sidebar">
+        <div class="ml-5 mt-5">
+            <img class="sidebar-header" src="images/budagchin-erka-a1f1_0AOQss-unsplash.jpg" alt="">
+            <span class="lead ml-5 ">{{name}}</span>
+            <span class="lead ml-5 text-warning">{{profession}}</span>
+        </div>
+        <!--        <div class="side-icons mt-4">-->
+        <!--            <i class="fas fa-coins " style="z-index: 9999!important"></i>-->
+        <!--        </div>-->
+
+        <ul class="list-unstyled components">
+
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Projects</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">home1</a>
+                    </li>
+                    <li>
+                        <a href="#">home2</a>
+                    </li>
+                    <li>
+                        <a href="#">home3</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">My Consultations</a>
+            </li>
+            <li class="">
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Events</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">page1</a>
+                    </li>
+                    <li>
+                        <a href="#">page2</a>
+                    </li>
+                    <li>
+                        <a href="#">page3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Products</a>
+            </li>
+            <li>
+                <a href="#">Artistry</a>
+            </li>
+            <li>
+                <a href="#">My Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="container-fluid ">
+            <div class="row mobile-head">
+                <div>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info mt-5 d-none sidebar-button-toggle">
+                        <i class="fa fa-align-justify"></i> <span>toggle sidebar</span>
+                    </button>
+                </div>
+                <h3 class=" d-none display-1 page-title-mob text-muted mt-4 ml-4 ">My Projects</h3>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row mt-5  mb-5 ml-2 ">
+                <h3 class=" float-sm-left display-1 page-title text-muted ">My Projects</h3>
+                <div class="add-new-mob mt-5">
+                    <button class=" float-sm-right  btn btn-warning btn-lg  ml-5"
+                            data-toggle="modal" data-target="#exampleModalCenter">Add New</button>
+                </div>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal  fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <!--                        <div class="modal-header">-->
+                        <!--                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>-->
+                        <!--                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                        <!--                                <span aria-hidden="true">&times;</span>-->
+                        <!--                            </button>-->
+                        <!--                        </div>-->
+                        <div class="modal-body">
+                            <div class="row ml-4">
+                                <div class="card-deck">
+                                    <a href="events.html">
+                                        <div class="card border-primary">
+                                            <!--                                    <img src="..." class="card-img-top" alt="...">-->
+                                            <div class="card-body">
+                                                <h5 class="card-title">EVENT</h5>
+                                                <p class="card-text">Create a new Event</p>
+                                                <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="card border-success">
+                                            <!--                                    <img src="..." class="card-img-top" alt="...">-->
+                                            <div class="card-body">
+                                                <h5 class="card-title">Project</h5>
+                                                <p class="card-text">Create a new project</p>
+                                                <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="card border-danger">
+                                            <!--                                    <img src="..." class="card-img-top" alt="...">-->
+                                            <div class="card-body">
+                                                <h5 class="card-title">Artistry</h5>
+                                                <p class="card-text">Create a new artistry</p>
+                                                <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="row mt-3 ml-4">
+                                <div class="card-deck">
+
+                                    <a href="#">
+                                        <div class="card border-info">
+                                            <!--                                    <img src="..." class="card-img-top" alt="...">-->
+                                            <div class="card-body">
+                                                <h5 class="card-title">Blog</h5>
+                                                <p class="card-text">Create a new blog</p>
+                                                <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="card border-warning">
+                                            <!--                                    <img src="..." class="card-img-top" alt="...">-->
+                                            <div class="card-body">
+                                                <h5 class="card-title">Product</h5>
+                                                <p class="card-text">Create a new product</p>
+                                                <!--                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--                        <div class="modal-footer">-->
+                        <!--                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                        <!--                            <button type="button" class="btn btn-primary">Save changes</button>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  results">
+                <!--                <div class="col-md-3 mb-4 text-center">-->
+                <!--                    <div class="card active">-->
+                <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/300x201" alt="">-->
+                <!--                        <div class="card-body">-->
+                <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+                <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+                <!--                                is a little bit longer.</p>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="col-md-3 mb-4 text-center">-->
+                <!--                    <div class="card">-->
+                <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/301x202" alt="">-->
+                <!--                        <div class="card-body">-->
+                <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+                <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+                <!--                                is a little bit longer.</p>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="col-md-3 mb-4 text-center">-->
+                <!--                    <div class="card">-->
+                <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/303x200" alt="">-->
+                <!--                        <div class="card-body">-->
+                <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+                <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+                <!--                                is a little bit longer.</p>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--                <div class="col-md-3 mb-3 text-center">-->
+                <!--                    <div class="card">-->
+                <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/304x202" alt="">-->
+                <!--                        <div class="card-body">-->
+                <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+                <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+                <!--                                is a little bit longer.</p>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+            </div>
+
+            <!--            <div class="row mt-3 ">-->
+            <!--                <div class="col-md-3 mb-4 text-center">-->
+            <!--                    <div class="card active">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/300x201" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-3 mb-4 text-center">-->
+            <!--                    <div class="card">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/301x202" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-3 mb-4 text-center">-->
+            <!--                    <div class="card">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/303x200" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-3 mb-3 text-center">-->
+            <!--                    <div class="card">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/304x202" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+            <!--            <div class="row mt-3 ">-->
+            <!--                <div class="col-md-3 mb-4 text-center">-->
+            <!--                    <div class="card active">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/300x201" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-3 mb-4 text-center">-->
+            <!--                    <div class="card">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/301x202" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-3 mb-4 text-center">-->
+            <!--                    <div class="card">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/303x200" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-md-3 mb-3 text-center">-->
+            <!--                    <div class="card">-->
+            <!--                        <img class="card-img-top " src="https://source.unsplash.com/random/304x202" alt="">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h4 class="card-title">Card title that wraps to a new line</h4>-->
+            <!--                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content-->
+            <!--                                is a little bit longer.</p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+
+    </div>
+</div>
+<!-- footer using hbs partials-->
+
+{{>footer}}
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#sidebarCollapse').on('click',function(){
+            $('#sidebar').toggleClass('active');
+        });
+    });
+</script>
+</body>
+</html>
