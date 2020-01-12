@@ -63,9 +63,6 @@ app.get('*', (req, res)=>{
    });
 });
 
-
-
-
 app.listen(3000, ()=>{
    console.log(`check the server running at port 3000`);
 });
